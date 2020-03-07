@@ -1,0 +1,41 @@
+{
+  "name": "brisk",
+  "description": "A web framework in Typescript",
+  "version": "0.0.1",
+  "main": "lib/server.js",
+  "types": "lib/server.d.ts",
+  "repository": "https://github.com/faraazahmad/brisk",
+  "author": "Faraaz <faraaz98@live.com>",
+  "license": "MIT",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test && yarn lint",
+    "preversion": "yarn lint",
+    "version": "yarn format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.0",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1",
+    "ts-jest": "^25.2.1",
+    "tslint": "^6.0.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "fastify": "^2.12.1",
+    "handlebars": "^4.7.3",
+    "point-of-view": "^3.7.2"
+  },
+  "keywords": ["ts", "typescript", "framework"]
+}
