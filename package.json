@@ -1,7 +1,7 @@
 {
-  "name": "brisk",
+  "name": "@debugg/brisk",
   "description": "A web framework in Typescript",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "lib/server.js",
   "types": "lib/server.d.ts",
   "repository": "https://github.com/faraazahmad/brisk",
@@ -37,5 +37,5 @@
     "handlebars": "^4.7.3",
     "point-of-view": "^3.7.2"
   },
-  "keywords": ["ts", "typescript", "framework"]
+  "keywords": ["ts", "typescript", "framework", "brisk", "debugg"]
 }
